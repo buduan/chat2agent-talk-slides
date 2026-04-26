@@ -1,7 +1,5 @@
 ---
 theme: default
-# 使用浅色背景，移除图片背景
-background: "#fafafa"
 highlighter: shiki
 lineNumbers: false
 info: |
@@ -16,7 +14,7 @@ css: unocss
 style: "@import './styles/style.css'; @import './styles/theme.css';"
 ---
 
-# 从聊天机器人到能干活的 AI
+# <span class="text-sky-500 font-bold">从聊天机器人到能干活的 AI</span>
 ## Agent 入门与实践
 
 ---
@@ -52,13 +50,13 @@ layout: two-cols
 </div>
 
 ---
-layout: center
-class: text-center
+layout: part-title
+part: 1
+partTitle: AI Agent 是什么？
+partSubtitle: Understanding AI Agents
+partDescription: 从对话式 AI 到自主执行任务的智能体
+totalParts: 4
 ---
-
-# Part 01
-
-## AI Agent 是什么？
 
 ---
 layout: center
@@ -72,14 +70,14 @@ class: text-center
 </div>
 
 ---
-layout: center
+layout: two-cols-header
 ---
 
 # 对话式 AI vs AI Agent
 
-<div class="grid grid-cols-2 gap-8 pt-8">
+::left::
 
-<div class="text-center">
+<div class="text-center pt-8">
 
 <v-clicks>
 
@@ -97,7 +95,9 @@ layout: center
 
 </div>
 
-<div class="text-center">
+::right::
+
+<div class="text-center pt-8">
 
 <v-clicks>
 
@@ -114,8 +114,6 @@ layout: center
 它自己反馈
 
 </v-clicks>
-
-</div>
 
 </div>
 
@@ -173,29 +171,11 @@ AI Agent 的三种核心能力：
 
 # Agent 的三层架构
 
-<div class="pt-8">
-
-```mermaid {scale: 0.8}
-graph TD
-    A[你的消息] --> B[渠道层<br/>Channel Layer]
-    B --> C[大脑层<br/>Brain / Agent Loop]
-    C --> D[执行层<br/>Body / Tools]
-
-    style A fill:#e1f5fe
-    style B fill:#bbdefb
-    style C fill:#90caf9
-    style D fill:#64b5f6
-```
-
-<div class="text-left mt-8 text-sm opacity-80">
-
-- **渠道层**：统一接收各平台消息
-- **大脑层**：理解目标 → 规划步骤 → 调用工具
-- **执行层**：文件读写 / 代码运行 / 浏览器操控 / 邮件发送
-
-</div>
-
-</div>
+| 层级 | 英文名 | 核心职责 | 典型能力 |
+|------|--------|----------|----------|
+| 渠道层 | Channel Layer | 统一接收并标准化外部输入 | 解析消息来源、提取上下文、路由请求 |
+| 大脑层 | Brain / Agent Loop | 理解目标并制定执行计划 | 任务拆解、步骤规划、工具选择、结果评估 |
+| 执行层 | Body / Tools | 调用工具并完成具体动作 | 文件读写、代码运行、浏览器操控、消息发送 |
 
 ---
 
@@ -243,20 +223,20 @@ graph TD
 
 </div>
 
-<div class="mt-8 p-4 bg-sky-50 bg-opacity-70 rounded-lg text-center">
+<div class="text-center mt-4 text-xl opacity-80">
 
 **共同点：从"回答问题"走向"完成任务"**
 
 </div>
 
 ---
-layout: center
-class: text-center
+layout: part-title
+part: 2
+partTitle: 从 Prompt 到 Agent 的演化路径
+partSubtitle: Evolution Path
+partDescription: 掌握从提问到让 AI 帮你做事的思维方式
+totalParts: 4
 ---
-
-# Part 02
-
-## 从 Prompt 到 Agent 的演化路径
 
 ---
 
@@ -393,13 +373,13 @@ class: text-center
 </div>
 
 ---
-layout: center
-class: text-center
+layout: part-title
+part: 3
+partTitle: 如何用好 Agent？
+partSubtitle: Best Practices
+partDescription: 下达任务、提供工具、设定规则
+totalParts: 4
 ---
-
-# Part 03
-
-## 如何用好 Agent？
 
 ---
 layout: center
@@ -452,8 +432,6 @@ layout: center
 </div>
 
 ---
-layout: center
----
 
 # GTCA 指令结构
 
@@ -461,43 +439,44 @@ layout: center
 
 <div class="grid grid-cols-4 gap-6">
 
-<div class="text-center p-6 rounded-lg bg-blue-500 bg-opacity-10">
+<div class="text-center">
 
-<div class="text-5xl mb-2">G</div>
+<span class="text-7xl text-blue-500 font-bold">G</span>
 
-### Goal
+<div class="text-2xl text-blue-500 font-bold mt-4">Goal</div>
 
-目标是什么
-
-</div>
-
-<div class="text-center p-6 rounded-lg bg-sky-100 bg-opacity-50">
-
-<div class="text-5xl mb-2">T</div>
-
-### Tools
-
-可以用哪些工具
+**目标是什么**
 
 </div>
 
-<div class="text-center p-6 rounded-lg bg-sky-50 bg-opacity-60">
+<div class="text-center">
 
-<div class="text-5xl mb-2">C</div>
+<span class="text-7xl text-sky-500 font-bold">T</span>
 
-### Context
+<div class="text-2xl text-sky-500 font-bold mt-4">Tools</div>
 
-背景信息
+**可以用哪些工具**
 
 </div>
 
-<div class="text-center p-6 rounded-lg bg-sky-200 bg-opacity-40">
+<div class="text-center">
 
-<div class="text-5xl mb-2">A</div>
+<span class="text-7xl text-sky-400 font-bold">C</span>
 
-### Action
+<div class="text-2xl text-sky-400 font-bold mt-4">Context</div>
 
-期望的输出形式
+**背景信息**
+
+
+</div>
+
+<div class="text-center">
+
+<span class="text-7xl text-sky-300 font-bold">A</span>
+
+<div class="text-2xl text-sky-300 font-bold mt-4">Action</div>
+
+**期望的输出形式**
 
 </div>
 
@@ -744,9 +723,13 @@ my-skill/
 
 # SKILL.md 四段式写法
 
-<div class="pt-4 text-left max-w-4xl mx-auto">
+<div class="pt-4">
 
-```markdown
+<div class="grid grid-cols-2 gap-8">
+
+<div class="text-left">
+
+```markdown magic-move
 ## When to use
 当用户需要撰写每周工作汇报时触发此 Skill。
 
@@ -765,45 +748,113 @@ Markdown，带分级标题，总字数控制在300字以内
 
 </div>
 
+<div class="text-left">
+
+<div v-click="1" class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
+
+### 📌 When to use
+
+**告诉 Agent 什么时候应该使用这个 Skill**
+
+- 明确触发场景
+- 避免误触发
+- 确保在合适的上下文中加载
+
+</div>
+
+<div v-click="2" class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
+
+### 🎯 Goal
+
+**定义这个 Skill 要达成什么目标**
+
+- 清晰的预期结果
+- 评判标准
+- 与用户意图的对齐
+
+</div>
+
+<div v-click="3" class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
+
+### 📋 Steps
+
+**给出具体的操作步骤和流程**
+
+- 可执行的步骤序列
+- 关键决策点
+- 最佳实践经验
+
+</div>
+
+<div v-click="4" class="p-4 rounded-lg bg-sky-200 bg-opacity-40">
+
+### 📤 Output format
+
+**规定输出的格式和规范**
+
+- 输出结构要求
+- 格式约束
+- 质量标准
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 ---
 
 # 三步上手法
 
 <div class="pt-8">
 
-<div class="space-y-6">
+<div class="grid grid-cols-3 gap-8">
 
-<div class="p-6 rounded-lg bg-blue-500 bg-opacity-10">
+<div class="text-center">
 
-### Step 1：找出重复任务
+**<span class="text-6xl text-blue-500 font-bold">Step 1</span>**
 
+<div class="text-3xl text-blue-500 font-bold mt-4">找出重复任务</div>
+
+<div class="mt-4 opacity-70">
 找出你每周重复做的一件事
+</div>
 
-<div class="opacity-70 mt-2">
+<div class="opacity-60 mt-2">
 写报告、整理会议记录、发跟进邮件...
 </div>
 
 </div>
 
-<div class="p-6 rounded-lg bg-sky-100 bg-opacity-50">
+<div class="text-center">
 
-### Step 2：拆解 Prompt
+**<span class="text-6xl text-sky-500 font-bold">Step 2</span>**
 
+<div class="text-3xl text-sky-500 font-bold mt-4">拆解 Prompt</div>
+
+<div class="mt-4 opacity-70">
 把你平时用的 Prompt 复制进来
+</div>
 
-<div class="opacity-70 mt-2">
+<div class="opacity-60 mt-2">
 拆成"触发条件 + 步骤 + 输出格式"
 </div>
 
 </div>
 
-<div class="p-6 rounded-lg bg-sky-50 bg-opacity-60">
+<div class="text-center">
 
-### Step 3：测试迭代
+**<span class="text-6xl text-sky-400 font-bold">Step 3</span>**
 
+<div class="text-3xl text-sky-400 font-bold mt-4">测试迭代</div>
+
+<div class="mt-4 opacity-70">
 保存为 SKILL.md
+</div>
 
-<div class="opacity-70 mt-2">
+<div class="opacity-60 mt-2">
 在 Claude 中加载，跑一次，根据输出修正
 </div>
 
@@ -967,13 +1018,13 @@ Markdown，带分级标题，总字数控制在300字以内
 </div>
 
 ---
-layout: center
-class: text-center
+layout: part-title
+part: 4
+partTitle: 安全边界意识
+partSubtitle: Security & Safety
+partDescription: 最小权限原则、低风险先试、定期审查
+totalParts: 4
 ---
-
-# Part 04
-
-## 安全边界意识
 
 ---
 
@@ -1026,9 +1077,9 @@ class: text-center
 
 <div class="pt-8">
 
-<div class="max-w-4xl mx-auto space-y-6">
+<div class="max-w-6xl mx-auto grid grid-cols-3 gap-6">
 
-<div class="text-left p-4 rounded-lg bg-blue-500 bg-opacity-10">
+<div class="text-left p-4 rounded-lg bg-blue-500 bg-opacity-10 h-full">
 
 ### AI Agent 的核心
 
@@ -1038,7 +1089,7 @@ class: text-center
 
 </div>
 
-<div class="text-left p-4 rounded-lg bg-sky-100 bg-opacity-50">
+<div class="text-left p-4 rounded-lg bg-sky-100 bg-opacity-50 h-full">
 
 ### 使用 Agent 的关键
 
@@ -1048,7 +1099,7 @@ class: text-center
 
 </div>
 
-<div class="text-left p-4 rounded-lg bg-sky-50 bg-opacity-60">
+<div class="text-left p-4 rounded-lg bg-sky-50 bg-opacity-60 h-full">
 
 ### 安全第一
 
@@ -1074,11 +1125,5 @@ class: text-center
 </div>
 
 <div class="mt-12">
-
-<v-clicks>
-
-### Q&A
-
-</v-clicks>
 
 </div>

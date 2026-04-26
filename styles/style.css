@@ -38,6 +38,12 @@ body {
   color: var(--slidev-theme-text);
 }
 
+/* 全局 h3 标题样式 */
+h3 {
+  font-weight: 600;
+  color: var(--slidev-theme-text);
+}
+
 /* 标题固定在左上角 */
 .slidev-page {
   padding-top: 3rem;
@@ -189,6 +195,13 @@ th {
 .bg-blue-500, .bg-blue-600, .bg-blue-700 {
   background-color: var(--slidev-theme-primary-light) !important;
   border-color: var(--slidev-theme-primary) !important;
+}
+
+/* 卡片标题使用 sky-500 */
+div[class*="bg-sky-"] h3,
+div[class*="bg-blue-"] h3 {
+  color: #0ea5e9 !important;
+  font-weight: 600 !important;
 }
 
 .bg-green-500, .bg-green-600 {
