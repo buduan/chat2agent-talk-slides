@@ -1,0 +1,404 @@
+/**
+ * Light + Sky Blue Minimal Theme for Slidev
+ * 极简主义设计，精确的间距和排版
+ */
+
+:root {
+  /* 基础颜色 - Sky Blue 色系 */
+  --slidev-theme-primary: #0ea5e9;
+  --slidev-theme-primary-dark: #0284c7;
+  --slidev-theme-primary-light: #e0f2fe;
+  --slidev-theme-secondary: #38bdf8;
+
+  /* 背景色 */
+  --slidev-theme-bg: #fafafa;
+  --slidev-theme-surface: #ffffff;
+  --slidev-code-bg: #f1f5f9;
+
+  /* 文字颜色 */
+  --slidev-theme-text: #0f172a;
+  --slidev-theme-text-secondary: #475569;
+  --slidev-theme-text-light: #94a3b8;
+
+  /* 边框和分隔线 */
+  --slidev-theme-border: #e2e8f0;
+  --slidev-theme-divider: #cbd5e1;
+
+  /* 强调色 - 仅用于代码高亮等特殊情况 */
+  --slidev-theme-accent: #0ea5e9;
+  --slidev-theme-accent-light: #e0f2fe;
+}
+
+/* 全局样式 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--slidev-theme-text);
+}
+
+/* 标题固定在左上角 */
+.slidev-page {
+  padding-top: 3rem;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  margin: 0;
+  max-width: calc(100% - 4rem);
+}
+
+/* 内容区域下移，为固定标题留出空间 */
+.slidev-layout {
+  padding-top: 4rem;
+}
+
+/* 响应式标题大小 */
+.slidev-layout h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.slidev-layout h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.slidev-layout h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+/* 覆盖居中布局的标题位置 */
+.slidev-layout.text-center h1,
+.slidev-layout.text-center h2,
+.slidev-layout.text-center h3 {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* 链接样式 */
+a {
+  color: var(--slidev-theme-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--slidev-theme-primary);
+}
+
+/* 代码块样式 */
+pre {
+  background: var(--slidev-code-bg) !important;
+  border: 1px solid var(--slidev-theme-border);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+code {
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+  background: var(--slidev-code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* 引用样式 */
+blockquote {
+  border-left: 3px solid var(--slidev-theme-primary);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--slidev-theme-text-secondary);
+  font-style: italic;
+}
+
+/* 列表样式优化 */
+ul, ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+li {
+  margin: 0.5rem 0;
+  line-height: 1.7;
+}
+
+/* 分隔线 */
+hr {
+  border: none;
+  border-top: 1px solid var(--slidev-theme-divider);
+  margin: 2rem 0;
+}
+
+/* 表格样式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--slidev-theme-border);
+}
+
+th {
+  background: var(--slidev-theme-primary-light);
+  font-weight: 600;
+  color: var(--slidev-theme-primary-dark);
+}
+
+/* 卡片容器优化 */
+.slidev-card {
+  background: var(--slidev-theme-surface);
+  border: 1px solid var(--slidev-theme-border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.slidev-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Sky blue 色系卡片 - 替换默认的彩色卡片 */
+.bg-blue-500, .bg-blue-600, .bg-blue-700 {
+  background-color: var(--slidev-theme-primary-light) !important;
+  border-color: var(--slidev-theme-primary) !important;
+}
+
+.bg-green-500, .bg-green-600 {
+  background-color: #f0f9ff !important;
+  border-color: var(--slidev-theme-secondary) !important;
+}
+
+.bg-purple-500, .bg-purple-600 {
+  background-color: #e0f2fe !important;
+  border-color: var(--slidev-theme-primary-dark) !important;
+}
+
+.bg-yellow-500, .bg-orange-500 {
+  background-color: #f0fdfa !important;
+  border-color: #06b6d4 !important;
+}
+
+.bg-red-500, .bg-pink-500 {
+  background-color: #eff6ff !important;
+  border-color: var(--slidev-theme-primary) !important;
+}
+
+/* 卡片文字颜色调整 */
+.bg-blue-500 *, .bg-blue-600 *,
+.bg-green-500 *, .bg-green-600 *,
+.bg-purple-500 *, .bg-purple-600 *,
+.bg-yellow-500 *, .bg-yellow-600 *,
+.bg-orange-500 *, .bg-orange-600 *,
+.bg-red-500 *, .bg-pink-500 * {
+  color: var(--slidev-theme-text) !important;
+}
+
+/* 标题卡片特殊样式 */
+.slidev-title {
+  background: linear-gradient(135deg, var(--slidev-theme-primary-light) 0%, var(--slidev-theme-surface) 100%);
+  border: 1px solid var(--slidev-theme-primary);
+  padding: 3rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+/* 组件容器间距 */
+.grid {
+  gap: 1.5rem;
+}
+
+.flex {
+  gap: 1rem;
+}
+
+/* 动画优化 */
+.v-clicks > * {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 页脚样式 */
+.slidev-layout .slidev-footer {
+  border-top: 1px solid var(--slidev-theme-border);
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  color: var(--slidev-theme-text-light);
+}
+
+/* 透明度层级 */
+.opacity-10 { opacity: 0.1; }
+.opacity-20 { opacity: 0.2; }
+.opacity-30 { opacity: 0.3; }
+.opacity-40 { opacity: 0.4; }
+.opacity-50 { opacity: 0.5; }
+.opacity-60 { opacity: 0.6; }
+.opacity-70 { opacity: 0.7; }
+.opacity-80 { opacity: 0.8; }
+.opacity-90 { opacity: 0.9; }
+
+/* 间距工具类优化 */
+.pt-2 { padding-top: 0.5rem; }
+.pt-4 { padding-top: 1rem; }
+.pt-6 { padding-top: 1.5rem; }
+.pt-8 { padding-top: 2rem; }
+.pt-12 { padding-top: 3rem; }
+
+.pb-2 { padding-bottom: 0.5rem; }
+.pb-4 { padding-bottom: 1rem; }
+.pb-6 { padding-bottom: 1.5rem; }
+.pb-8 { padding-bottom: 2rem; }
+
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-8 { padding-left: 2rem; padding-right: 2rem; }
+
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-12 { margin-top: 3rem; }
+
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+
+.ml-2 { margin-left: 0.5rem; }
+.ml-4 { margin-left: 1rem; }
+.ml-6 { margin-left: 1.5rem; }
+.ml-8 { margin-left: 2rem; }
+
+.mr-2 { margin-right: 0.5rem; }
+.mr-4 { margin-right: 1rem; }
+.mr-6 { margin-right: 1.5rem; }
+.mr-8 { margin-right: 2rem; }
+
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+
+/* 圆角 */
+.rounded { border-radius: 0.25rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-2xl { border-radius: 1rem; }
+
+/* 文本对齐 */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* 字重 */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* 文本大小 */
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+
+/* 光标样式 */
+.cursor-pointer { cursor: pointer; }
+
+/* 过渡效果 */
+.hover\:bg-opacity-10:hover {
+  background-color: rgba(14, 165, 233, 0.1);
+}
+
+/* 内联代码优化 */
+:not(pre) > code {
+  color: var(--slidev-theme-primary-dark);
+  font-weight: 500;
+}
+
+/* Mermaid 图表优化 */
+.mermaid {
+  background: var(--slidev-theme-surface);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+/* 按钮样式 */
+button, .btn {
+  background: var(--slidev-theme-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  background: var(--slidev-theme-primary-dark);
+}
+
+/* 强调文字 */
+strong, b {
+  font-weight: 600;
+  color: var(--slidev-theme-primary-dark);
+}
+
+/* 两栏布局优化 */
+.slidev-layout.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .slidev-layout.two-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .slidev-layout h1 {
+    font-size: 2rem;
+  }
+
+  .slidev-layout h2 {
+    font-size: 1.5rem;
+  }
+}
