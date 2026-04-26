@@ -12,10 +12,21 @@ mdc: true
 # 引入自定义样式
 css: unocss
 style: "@import './styles/style.css'; @import './styles/theme.css';"
+layout: cover
 ---
 
-# <span class="text-sky-500 font-bold">从聊天机器人到能干活的 AI</span>
-## Agent 入门与实践
+# <span class="font-bold text-6xl leading-tight"> 从聊天机器人 <br /> <span class="text-sky-500"> 到能干活的 AI </span> </span>
+
+## <span class="font-semibold text-xl">Agent 入门与实践</span>
+
+<div class="pt-4 text-sm text-sky-500 font-semibold tracking-widest uppercase">
+  让 AI 成为你真正的协作者
+</div>
+
+---
+layout: iframe
+url: https://www.mentimeter.com/app/presentation/aly6gnke2jvdm3uf9kmmz1f7tn4bssbu/embed
+---
 
 ---
 layout: two-cols
@@ -309,40 +320,24 @@ LLM + Tools
 
 # 每个阶段的核心跃迁
 
-<div class="pt-8">
+<div class="pt-6 flex flex-col gap-4 max-w-2xl">
 
-<div class="space-y-4">
-
-<div class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
-
-### Stage 1 → 2
-
-从"随便问"到"会问"
-
-学会给 AI 足够的上下文和约束
-
+<div class="p-5 rounded-xl border border-violet-300 bg-violet-50 bg-opacity-60">
+  <div class="text-lg font-bold text-violet-600 mb-1">Stage 1 → 2</div>
+  <div class="text-base font-semibold text-gray-800 mb-0.5">从"随便问"到"会问"</div>
+  <div class="text-sm font-normal text-gray-500">学会给 AI 足够的上下文和约束</div>
 </div>
 
-<div class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
-
-### Stage 2 → 3
-
-从"聊天"到"干活"
-
-让 AI 连接真实工具，而不只是生成文字
-
+<div class="p-5 rounded-xl border border-sky-300 bg-sky-50 bg-opacity-60">
+  <div class="text-lg font-bold text-sky-600 mb-1">Stage 2 → 3</div>
+  <div class="text-base font-semibold text-gray-800 mb-0.5">从"聊天"到"干活"</div>
+  <div class="text-sm font-normal text-gray-500">让 AI 连接真实工具，而不只是生成文字</div>
 </div>
 
-<div class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
-
-### Stage 3 → 4
-
-从"单步执行"到"自主完成"
-
-把目标交给 Agent，而不是每一步都自己盯着
-
-</div>
-
+<div class="p-5 rounded-xl border border-emerald-300 bg-emerald-50 bg-opacity-60">
+  <div class="text-lg font-bold text-emerald-600 mb-1">Stage 3 → 4</div>
+  <div class="text-base font-semibold text-gray-800 mb-0.5">从"单步执行"到"自主完成"</div>
+  <div class="text-sm font-normal text-gray-500">把目标交给 Agent，而不是每一步都自己盯着</div>
 </div>
 
 </div>
@@ -360,7 +355,7 @@ class: text-center
 
 </div>
 
-<div class="mt-12 p-8 bg-sky-300 bg-opacity-30 rounded-lg max-w-4xl mx-auto">
+<div class="mt-12 p-8 bg-yellow-100 bg-opacity-30 rounded-lg max-w-4xl mx-auto">
 
 真正能释放 Agent 价值的，是掌握 **Stage 3 和 Stage 4** 的思维方式
 

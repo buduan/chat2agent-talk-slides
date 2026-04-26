@@ -82,8 +82,6 @@ const titleWords = computed(() => {
   justify-content: center;
   overflow: hidden;
   background: linear-gradient(135deg, #fafafa 0%, #f0f9ff 100%);
-  margin: -3rem -2rem;
-  padding: 3rem 2rem;
 }
 
 /* Background decorative circles */
@@ -146,7 +144,7 @@ const titleWords = computed(() => {
   z-index: 1;
   text-align: center;
   max-width: 900px;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 /* Part number badge */
