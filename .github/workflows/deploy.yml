@@ -33,10 +33,10 @@ jobs:
         run: pnpm install
 
       - name: Build Chinese slides (root)
-        run: pnpm slidev build slides.md --base / --out dist
+        run: pnpm slidev build slides.md --base /${{ github.event.repository.name }}/ --out dist
 
       - name: Build English slides (/en/)
-        run: pnpm slidev build slides_en.md --base /en/ --out dist/en
+        run: pnpm slidev build slides_en.md --base /${{ github.event.repository.name }}/en/ --out dist/en
 
       - uses: actions/upload-pages-artifact@v3
         with:
