@@ -24,15 +24,10 @@ layout: cover
 </div>
 
 ---
-layout: iframe
-url: https://www.mentimeter.com/app/presentation/aly6gnke2jvdm3uf9kmmz1f7tn4bssbu/embed
----
-
----
 layout: two-cols
 ---
 
-# 议程
+# **议程**
 
 <Timeline>
 
@@ -70,21 +65,23 @@ totalParts: 4
 ---
 
 ---
-layout: center
+layout: quote
 class: text-center
+quote: "你有没有使用过 AI 工具？"
 ---
 
-# 从"聊天机器人"到"能干活的 AI"
+# **你有没有使用过 AI 工具？**
 
-<div class="text-2xl opacity-80 mt-8">
-你有没有使用过 AI 工具？
-</div>
+---
+layout: iframe
+url: https://www.mentimeter.com/app/presentation/aly6gnke2jvdm3uf9kmmz1f7tn4bssbu/embed
+---
 
 ---
 layout: two-cols-header
 ---
 
-# 对话式 AI vs AI Agent
+# **对话式 AI vs AI Agent**
 
 ::left::
 
@@ -130,7 +127,7 @@ layout: two-cols-header
 
 ---
 
-# 什么是 AI Agent？
+# **什么是 AI Agent？**
 
 <div class="pt-8">
 
@@ -142,7 +139,7 @@ AI Agent 的三种核心能力：
 
 <div class="text-4xl mb-2">👁️</div>
 
-### 感知
+### **感知**
 
 读取文件、邮件、网页、日历等外部信息
 
@@ -152,7 +149,7 @@ AI Agent 的三种核心能力：
 
 <div class="text-4xl mb-2">🧠</div>
 
-### 规划
+### **规划**
 
 将大目标拆解成多步骤任务
 
@@ -162,7 +159,7 @@ AI Agent 的三种核心能力：
 
 <div class="text-4xl mb-2">🦾</div>
 
-### 执行
+### **执行**
 
 操作工具——发邮件、跑代码、控制浏览器
 
@@ -180,7 +177,7 @@ AI Agent 的三种核心能力：
 
 ---
 
-# Agent 的三层架构
+# **Agent 的三层架构**
 
 | 层级 | 英文名 | 核心职责 | 典型能力 |
 |------|--------|----------|----------|
@@ -190,13 +187,13 @@ AI Agent 的三种核心能力：
 
 ---
 
-# Coding Agent 和 Agentic AI
+# **Coding Agent 和 Agentic AI**
 
 <div class="pt-8 grid grid-cols-2 gap-8">
 
 <div class="p-6 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 💻 Coding Agent
+### **💻 Coding Agent**
 
 <div class="text-left mt-4 opacity-80">
 聚焦软件开发场景
@@ -215,7 +212,7 @@ AI Agent 的三种核心能力：
 
 <div class="p-6 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 🌐 Agentic AI
+### **🌐 Agentic AI**
 
 <div class="text-left mt-4 opacity-80">
 面向更广泛的业务与生活场景
@@ -251,7 +248,7 @@ totalParts: 4
 
 ---
 
-# 四个阶段
+# **四个阶段**
 
 <div class="pt-8">
 
@@ -259,7 +256,7 @@ totalParts: 4
 
 <div class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
 
-### Stage 1
+### **Stage 1**
 
 **提问者**
 
@@ -269,7 +266,7 @@ totalParts: 4
 
 <div class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
 
-### Stage 2
+### **Stage 2**
 
 **指令者**
 
@@ -279,7 +276,7 @@ totalParts: 4
 
 <div class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
 
-### Stage 3
+### **Stage 3**
 
 **工具使用者**
 
@@ -289,7 +286,7 @@ LLM + Tools
 
 <div class="p-4 rounded-lg bg-sky-200 bg-opacity-40">
 
-### Stage 4
+### **Stage 4**
 
 **Agent 使用者**
 
@@ -303,7 +300,7 @@ LLM + Tools
 
 ---
 
-# 四个阶段对比
+# **四个阶段对比**
 
 <div class="pt-8">
 
@@ -318,7 +315,7 @@ LLM + Tools
 
 ---
 
-# 每个阶段的核心跃迁
+# **每个阶段的核心跃迁**
 
 <div class="pt-6 flex flex-col gap-4 max-w-2xl">
 
@@ -347,7 +344,7 @@ layout: center
 class: text-center
 ---
 
-# 你现在在哪个阶段？
+# **你现在在哪个阶段？**
 
 <div class="pt-8 text-2xl opacity-80">
 
@@ -380,7 +377,7 @@ totalParts: 4
 layout: center
 ---
 
-# 技巧一：下达"任务"而非"问题"
+# **技巧一：下达"任务"而非"问题"**
 
 <div class="pt-8">
 
@@ -392,19 +389,19 @@ layout: center
 
 <div class="p-4 rounded-lg bg-blue-500 bg-opacity-10 text-center">
 
-### 🎯 目标
+### **🎯 目标**
 
 </div>
 
 <div class="p-4 rounded-lg bg-sky-100 bg-opacity-50 text-center">
 
-### 📋 上下文
+### **📋 上下文**
 
 </div>
 
 <div class="p-4 rounded-lg bg-sky-50 bg-opacity-60 text-center">
 
-### 🔧 约束条件
+### **🔧 约束条件**
 
 </div>
 
@@ -414,7 +411,7 @@ layout: center
 
 ---
 
-# 低效指令 vs 高效指令
+# **低效指令 vs 高效指令**
 
 <div class="pt-4">
 
@@ -428,7 +425,7 @@ layout: center
 
 ---
 
-# GTCA 指令结构
+# **GTCA 指令结构**
 
 <div class="pt-8">
 
@@ -481,7 +478,7 @@ layout: center
 
 ---
 
-# 技巧二：让 AI 学会使用工具
+# **技巧二：让 AI 学会使用工具**
 
 <div class="pt-8">
 
@@ -489,7 +486,7 @@ layout: center
 
 <div class="p-6 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 🔌 MCP Tools
+### **🔌 MCP Tools**
 
 <div class="text-left mt-4">
 - 开放标准
@@ -501,7 +498,7 @@ layout: center
 
 <div class="p-6 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 📦 Skills
+### **📦 Skills**
 
 <div class="text-left mt-4">
 - 可复用能力包
@@ -517,7 +514,7 @@ layout: center
 
 ---
 
-# MCP：Model Context Protocol
+# **MCP：Model Context Protocol**
 
 <div class="pt-8">
 
@@ -533,7 +530,7 @@ layout: center
 
 <div>
 
-### 核心特点
+### **核心特点**
 
 - **统一接口**：一个协议连接一切
 - **即插即用**：无需写接入逻辑
@@ -543,7 +540,7 @@ layout: center
 
 <div>
 
-### 常见 MCP Server
+### **常见 MCP Server**
 
 - GitHub
 - Notion
@@ -563,7 +560,7 @@ layout: center
 
 ---
 
-# Skills：可复用能力包
+# **Skills：可复用能力包**
 
 <div class="pt-8">
 
@@ -579,7 +576,7 @@ layout: center
 
 <div>
 
-### 特点
+### **特点**
 
 - 按需加载，不占用主上下文
 - 可组合、可分享、可版本化
@@ -589,7 +586,7 @@ layout: center
 
 <div>
 
-### 典型例子
+### **典型例子**
 
 - PPT 制作
 - PDF 处理
@@ -607,7 +604,7 @@ layout: center
 
 ---
 
-# MCP vs Skills
+# **MCP vs Skills**
 
 <div class="pt-8">
 
@@ -615,7 +612,7 @@ layout: center
 
 <div class="p-8 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 🔌 MCP
+### **🔌 MCP**
 
 **连接外部工具的通道**
 
@@ -629,7 +626,7 @@ layout: center
 
 <div class="p-8 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 📦 Skills
+### **📦 Skills**
 
 **封装好的做事方法论**
 
@@ -647,7 +644,7 @@ layout: center
 
 ---
 
-# 如何用好 Skills
+# **如何用好 Skills**
 
 <div class="pt-8">
 
@@ -655,7 +652,7 @@ layout: center
 
 <div class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 🎯 聚焦单一场景
+### **🎯 聚焦单一场景**
 
 一个 Skill 只解决一类问题
 
@@ -663,7 +660,7 @@ layout: center
 
 <div class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 📝 写清触发条件
+### **📝 写清触发条件**
 
 明确"什么时候用它"
 
@@ -671,7 +668,7 @@ layout: center
 
 <div class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
 
-### 🔗 善用组合
+### **🔗 善用组合**
 
 串起来完成复杂任务
 
@@ -679,7 +676,7 @@ layout: center
 
 <div class="p-4 rounded-lg bg-sky-200 bg-opacity-40">
 
-### 📦 从模板开始
+### **📦 从模板开始**
 
 复用官方或社区的 Skill
 
@@ -691,7 +688,7 @@ layout: center
 
 ---
 
-# 做自己的 Skills
+# **做自己的 Skills**
 
 <div class="pt-8">
 
@@ -716,7 +713,7 @@ my-skill/
 
 ---
 
-# SKILL.md 四段式写法
+# **SKILL.md 四段式写法**
 
 <div class="pt-4">
 
@@ -747,7 +744,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 <div v-click="1" class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 📌 When to use
+### **📌 When to use**
 
 **告诉 Agent 什么时候应该使用这个 Skill**
 
@@ -759,7 +756,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 <div v-click="2" class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 🎯 Goal
+### **🎯 Goal**
 
 **定义这个 Skill 要达成什么目标**
 
@@ -771,7 +768,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 <div v-click="3" class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
 
-### 📋 Steps
+### **📋 Steps**
 
 **给出具体的操作步骤和流程**
 
@@ -783,7 +780,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 <div v-click="4" class="p-4 rounded-lg bg-sky-200 bg-opacity-40">
 
-### 📤 Output format
+### **📤 Output format**
 
 **规定输出的格式和规范**
 
@@ -801,7 +798,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 ---
 
-# 三步上手法
+# **三步上手法**
 
 <div class="pt-8">
 
@@ -861,7 +858,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 ---
 
-# 适合定制的 Skill 场景
+# **适合定制的 Skill 场景**
 
 <div class="pt-8">
 
@@ -877,25 +874,28 @@ Markdown，带分级标题，总字数控制在300字以内
 
 ---
 
-# 技巧三：Instruction / Rule
+# **技巧三：Instruction / Rule**
 
 <div class="pt-8">
 
 <div class="max-w-4xl mx-auto">
 
-<div class="p-6 bg-sky-200 bg-opacity-40 rounded-lg mb-8">
 
 如果说 Skills 是"给 Agent 一本操作手册"
 
-那么 Instruction / Rule 是"给 Agent 立规矩"
+那么 Instruction / Rule 是 **"给 Agent 立规矩"**
 
-</div>
+对于 Claude Code / Cowork, 是`CLAUDE.md`
+
+对于 OpenClaw, 是`CONFIG.md`
+
+对于 Codex, 是`AGENT.md`
 
 <div class="grid grid-cols-2 gap-6">
 
-<div class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
+<div class="p-4 rounded-lg bg-blue-400 bg-opacity-10">
 
-### Instruction（指令）
+### **Instruction（指令）**
 
 <div class="text-left mt-2">
 告诉 Agent 它是谁、目标是什么
@@ -907,7 +907,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 <div class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
 
-### Rule（规则）
+### **Rule（规则）**
 
 <div class="text-left mt-2">
 约束 Agent 的行为边界
@@ -925,7 +925,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 ---
 
-# 五类常用 Rule
+# **五类常用 Rule**
 
 <div class="pt-8">
 
@@ -941,7 +941,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 ---
 
-# 完整的 Instruction 示例
+# **完整的 Instruction 示例**
 
 <div class="pt-4 text-left max-w-4xl mx-auto">
 
@@ -970,7 +970,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 ---
 
-# 写好 Rule 的四条原则
+# **写好 Rule 的四条原则**
 
 <div class="pt-8">
 
@@ -978,7 +978,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 <div class="p-6 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 1️⃣ 具体胜于抽象
+### **1️⃣ 具体胜于抽象**
 
 "回复简短"不如"回复不超过150字"
 
@@ -986,7 +986,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 <div class="p-6 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 2️⃣ 正面描述为主
+### **2️⃣ 正面描述为主**
 
 说"只做X"比说"不要做Y"更有效
 
@@ -994,7 +994,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 <div class="p-6 rounded-lg bg-sky-50 bg-opacity-60">
 
-### 3️⃣ 不要贪多
+### **3️⃣ 不要贪多**
 
 5条精准规则 > 20条模糊要求
 
@@ -1002,7 +1002,7 @@ Markdown，带分级标题，总字数控制在300字以内
 
 <div class="p-6 rounded-lg bg-sky-200 bg-opacity-40">
 
-### 4️⃣ 随用随调
+### **4️⃣ 随用随调**
 
 根据使用习惯变化更新迭代
 
@@ -1023,7 +1023,7 @@ totalParts: 4
 
 ---
 
-# 三条安全原则
+# **三条安全原则**
 
 <div class="pt-8">
 
@@ -1031,7 +1031,7 @@ totalParts: 4
 
 <div class="p-4 rounded-lg bg-sky-400 bg-opacity-20">
 
-### 🔐 最小权限原则
+### **🔐 最小权限原则**
 
 <div class="text-xl mt-2">
 只给 Agent 它真正需要的权限
@@ -1041,7 +1041,7 @@ totalParts: 4
 
 <div class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
 
-### 🧪 低风险先试
+### **🧪 低风险先试**
 
 <div class="text-xl mt-2">
 先用不敏感的任务测试，再授予更高权限
@@ -1051,7 +1051,7 @@ totalParts: 4
 
 <div class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 🔍 定期审查
+### **🔍 定期审查**
 
 <div class="text-xl mt-2">
 检查 Agent 在做什么，而不是完全放手
@@ -1068,7 +1068,7 @@ layout: center
 class: text-center
 ---
 
-# 总结
+# **总结**
 
 <div class="pt-8">
 
@@ -1076,7 +1076,7 @@ class: text-center
 
 <div class="text-left p-4 rounded-lg bg-blue-500 bg-opacity-10 h-full">
 
-### AI Agent 的核心
+### **AI Agent 的核心**
 
 **LLM 大脑 + 工具手脚 + 记忆系统**
 
@@ -1086,7 +1086,7 @@ class: text-center
 
 <div class="text-left p-4 rounded-lg bg-sky-100 bg-opacity-50 h-full">
 
-### 使用 Agent 的关键
+### **使用 Agent 的关键**
 
 **下达任务 + 提供工具 + 设定规则**
 
@@ -1096,7 +1096,7 @@ class: text-center
 
 <div class="text-left p-4 rounded-lg bg-sky-50 bg-opacity-60 h-full">
 
-### 安全第一
+### **安全第一**
 
 **最小权限 + 低风险测试 + 定期审查**
 
@@ -1111,14 +1111,10 @@ layout: center
 class: text-center
 ---
 
-# 感谢观看
+# <span class="text-6xl font-bold text-blue-500"> THIS IS ALL! </span>
 
-<div class="pt-12 text-xl opacity-80">
+<div class="text-xl opacity-80">
 
 从今天开始，让 AI 成为你真正的协作者
-
-</div>
-
-<div class="mt-12">
 
 </div>
