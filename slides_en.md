@@ -1,7 +1,5 @@
 ---
 theme: default
-background: https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920
-class: text-center
 highlighter: shiki
 lineNumbers: false
 info: |
@@ -11,22 +9,25 @@ drawings:
 transition: slide-left
 title: From Chatbot to Co-worker
 mdc: true
+# Import custom styles
+css: unocss
+style: "@import './styles/style.css'; @import './styles/theme.css';"
+layout: cover
 ---
 
-# From Chatbot to Co-worker
-## Building and Using AI Agents
+# <span class="font-bold text-6xl leading-tight"> From Chatbot <br /> <span class="text-sky-500"> to Co-worker </span> </span>
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
+## <span class="font-semibold text-xl">Agent Introduction and Practice</span>
+
+<div class="pt-4 text-sm text-sky-500 font-semibold tracking-widest uppercase">
+  Let AI become your true collaborator
 </div>
 
 ---
 layout: two-cols
 ---
 
-# Agenda
+# **Agenda**
 
 <Timeline>
 
@@ -55,34 +56,36 @@ layout: two-cols
 </div>
 
 ---
-layout: center
+layout: part-title
+part: 1
+partTitle: What is an AI Agent?
+partSubtitle: Understanding AI Agents
+partDescription: From conversational AI to autonomous task-executing agents
+totalParts: 4
+---
+
+---
+layout: quote
 class: text-center
+quote: "Have you ever used AI tools?"
 ---
 
-# Part 01
-
-## What is an AI Agent?
+# **Have you ever used AI tools?**
 
 ---
-layout: center
-class: text-center
+layout: iframe
+url: https://www.mentimeter.com/app/presentation/aly6gnke2jvdm3uf9kmmz1f7tn4bssbu/embed
 ---
 
-# From "Chatbot" to "AI That Can Do Work"
-
-<div class="text-2xl opacity-80 mt-8">
-Have you used AI tools before?
-</div>
-
 ---
-layout: center
+layout: two-cols-header
 ---
 
-# Conversational AI vs AI Agent
+# **Conversational AI vs AI Agent**
 
-<div class="grid grid-cols-2 gap-8 pt-8">
+::left::
 
-<div class="text-center">
+<div class="text-center pt-8">
 
 <v-clicks>
 
@@ -100,7 +103,9 @@ Then you execute it yourself
 
 </div>
 
-<div class="text-center">
+::right::
+
+<div class="text-center pt-8">
 
 <v-clicks>
 
@@ -120,17 +125,13 @@ It provides feedback
 
 </div>
 
-</div>
-
----
-layout: center
 ---
 
-# What is an AI Agent?
+# **What is an AI Agent?**
 
 <div class="pt-8">
 
-Three Core Capabilities of AI Agents:
+Three core capabilities of an AI Agent:
 
 <div class="grid grid-cols-3 gap-6 mt-8">
 
@@ -138,27 +139,27 @@ Three Core Capabilities of AI Agents:
 
 <div class="text-4xl mb-2">👁️</div>
 
-### Perception
+### **Perception**
 
-Read files, emails, web pages, calendars, and other external information
+Read external information like files, emails, webpages, calendars
 
 </div>
 
-<div class="text-center p-4 rounded-lg bg-green-500 bg-opacity-10">
+<div class="text-center p-4 rounded-lg bg-sky-100 bg-opacity-50">
 
 <div class="text-4xl mb-2">🧠</div>
 
-### Planning
+### **Planning**
 
 Break down large goals into multi-step tasks
 
 </div>
 
-<div class="text-center p-4 rounded-lg bg-purple-500 bg-opacity-10">
+<div class="text-center p-4 rounded-lg bg-sky-200 bg-opacity-40">
 
 <div class="text-4xl mb-2">🦾</div>
 
-### Execution
+### **Execution**
 
 Operate tools—send emails, run code, control browsers
 
@@ -166,59 +167,36 @@ Operate tools—send emails, run code, control browsers
 
 </div>
 
-<div class="mt-12 p-6 bg-yellow-500 bg-opacity-20 rounded-lg">
+<div class="mt-12 p-6 bg-sky-50 bg-opacity-70 rounded-lg">
 
-**AI Agent = LLM Brain + Tools + Memory System**
-
-</div>
-
-</div>
-
----
-layout: center
----
-
-# Three-Layer Architecture of Agents
-
-<div class="pt-8">
-
-```mermaid {scale: 0.8}
-graph TD
-    A[Your Message] --> B[Channel Layer]
-    B --> C[Brain Layer<br/>Agent Loop]
-    C --> D[Body Layer<br/>Tools]
-
-    style A fill:#e1f5fe
-    style B fill:#bbdefb
-    style C fill:#90caf9
-    style D fill:#64b5f6
-```
-
-<div class="text-left mt-8 text-sm opacity-80">
-
-- **Channel Layer**: Unified message reception from various platforms
-- **Brain Layer**: Understand goal → Plan steps → Call tools
-- **Body Layer**: File read/write / Code execution / Browser control / Email sending
+**AI Agent = LLM Brain + Tool Limbs + Memory System**
 
 </div>
 
 </div>
 
 ---
-layout: center
+
+# **Agent's Three-Layer Architecture**
+
+| Layer | English Name | Core Responsibility | Typical Capabilities |
+|------|--------|----------|----------|
+| Channel | Channel Layer | Receive and standardize external inputs | Parse message sources, extract context, route requests |
+| Brain | Brain / Agent Loop | Understand goals and create execution plans | Task breakdown, step planning, tool selection, result evaluation |
+| Execution | Body / Tools | Call tools and perform specific actions | File Read/Write, code execution, browser control, message sending |
+
 ---
 
-# Coding Agent and Agentic AI
+# **Coding Agent and Agentic AI**
 
 <div class="pt-8 grid grid-cols-2 gap-8">
 
 <div class="p-6 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 💻 Coding Agent
+### **💻 Coding Agent**
 
 <div class="text-left mt-4 opacity-80">
-Focus on software development scenarios
-
+Focusing on software development scenarios
 - Read code
 - Write code
 - Run tests
@@ -226,52 +204,50 @@ Focus on software development scenarios
 </div>
 
 <div class="mt-4 text-sm">
-Examples: Claude Code, Cursor, Devin, GitHub Copilot Agent
+Representatives: Claude Code, Cursor, Devin, GitHub Copilot Agent
 </div>
 
 </div>
 
-<div class="p-6 rounded-lg bg-green-500 bg-opacity-10">
+<div class="p-6 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 🌐 Agentic AI
+### **🌐 Agentic AI**
 
 <div class="text-left mt-4 opacity-80">
-Broader business and life scenarios
+Targeting broader business and life scenarios
 
 - Research
 - Book flights
-- Generate reports
+- Make reports
 - Send emails
 </div>
 
 <div class="mt-4 text-sm">
-Examples: ChatGPT Agent, Manus, Claude Cowork, OpenClaw
+Representatives: ChatGPT Agent, Manus, Claude Cowork, OpenClaw
 </div>
 
 </div>
 
 </div>
 
-<div class="mt-8 p-4 bg-yellow-500 bg-opacity-20 rounded-lg text-center">
+<div class="text-center mt-4 text-xl opacity-80">
 
-**Common Point: From "Answering Questions" to "Completing Tasks"**
+**Common point: From "answering questions" to "completing tasks"**
 
 </div>
 
 ---
-layout: center
-class: text-center
+layout: part-title
+part: 2
+partTitle: Evolution Path from Prompt to Agent
+partSubtitle: Evolution Path
+partDescription: Master the mindset shift from asking questions to getting AI to work for you
+totalParts: 4
 ---
 
-# Part 02
-
-## Evolution Path from Prompt to Agent
-
----
-layout: center
 ---
 
-# Four Stages
+# **Four Stages**
 
 <div class="pt-8">
 
@@ -279,39 +255,39 @@ layout: center
 
 <div class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
 
-### Stage 1
+### **Stage 1**
 
-**Asker**
+**Questioner**
 
 Single-turn dialogue
 
 </div>
 
-<div class="p-4 rounded-lg bg-green-500 bg-opacity-10">
+<div class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
 
-### Stage 2
+### **Stage 2**
 
 **Instructor**
 
-Multi-turn + Prompt design
+Multi-round + Prompt design
 
 </div>
 
-<div class="p-4 rounded-lg bg-yellow-500 bg-opacity-10">
+<div class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
 
-### Stage 3
+### **Stage 3**
 
-**Tool User**
+**Tool user**
 
 LLM + Tools
 
 </div>
 
-<div class="p-4 rounded-lg bg-purple-500 bg-opacity-10">
+<div class="p-4 rounded-lg bg-sky-200 bg-opacity-40">
 
-### Stage 4
+### **Stage 4**
 
-**Agent User**
+**Agent user**
 
 Autonomous planning
 
@@ -322,62 +298,42 @@ Autonomous planning
 </div>
 
 ---
-layout: center
----
 
-# Comparison of Four Stages
+# **Comparison of the Four Stages**
 
 <div class="pt-8">
 
-| Stage | Approach | What You Do | What AI Does |
-|-------|----------|-------------|--------------|
+| Stage | Mode | What You Do | What AI Does |
+|------|------|----------|-----------|
 | **Stage 1** | Single-turn dialogue | Ask questions | Give answers |
-| **Stage 2** | Multi-turn + Prompt design | Write clear requirements, provide context | Generate content, provide suggestions |
-| **Stage 3** | LLM + Tools | Describe goals, select tools | Call tools, process results |
-| **Stage 4** | Autonomous planning + Multi-step execution | Provide goals and constraints | Autonomous breakdown, execution, feedback |
+| **Stage 2** | Multi-round + Prompt design | Write clear requirements, give context | Generate content, provide suggestions |
+| **Stage 3** | LLM + Tools | Describe target, choose tools | Call tools, process results |
+| **Stage 4** | Autonomous planning + Multi-step execution | Give goals and constraints | Autonomously break down, execute, provide feedback |
 
 </div>
 
 ---
-layout: center
----
 
-# Core Transitions of Each Stage
+# **Core Transitions of Each Stage**
 
-<div class="pt-8">
+<div class="pt-6 flex flex-col gap-4 max-w-2xl">
 
-<div class="space-y-4">
-
-<div class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
-
-### Stage 1 → 2
-
-From "Asking Randomly" to "Knowing How to Ask"
-
-Learn to give AI sufficient context and constraints
-
+<div class="p-5 rounded-xl border border-violet-300 bg-violet-50 bg-opacity-60">
+  <div class="text-lg font-bold text-violet-600 mb-1">Stage 1 → 2</div>
+  <div class="text-base font-semibold text-gray-800 mb-0.5">From "Asking randomly" to "Knowing how to ask"</div>
+  <div class="text-sm font-normal text-gray-500">Learn to give AI enough context and constraints</div>
 </div>
 
-<div class="p-4 rounded-lg bg-green-500 bg-opacity-10">
-
-### Stage 2 → 3
-
-From "Chatting" to "Doing Work"
-
-Let AI connect to real tools, not just generate text
-
+<div class="p-5 rounded-xl border border-sky-300 bg-sky-50 bg-opacity-60">
+  <div class="text-lg font-bold text-sky-600 mb-1">Stage 2 → 3</div>
+  <div class="text-base font-semibold text-gray-800 mb-0.5">From "Chatting" to "Working"</div>
+  <div class="text-sm font-normal text-gray-500">Connect AI to real tools, not just text generation</div>
 </div>
 
-<div class="p-4 rounded-lg bg-yellow-500 bg-opacity-10">
-
-### Stage 3 → 4
-
-From "Single-step Execution" to "Autonomous Completion"
-
-Hand goals to Agent instead of watching every step yourself
-
-</div>
-
+<div class="p-5 rounded-xl border border-emerald-300 bg-emerald-50 bg-opacity-60">
+  <div class="text-lg font-bold text-emerald-600 mb-1">Stage 3 → 4</div>
+  <div class="text-base font-semibold text-gray-800 mb-0.5">From "Single-step execution" to "Autonomous completion"</div>
+  <div class="text-sm font-normal text-gray-500">Hand the goal over to the Agent, instead of monitoring every step</div>
 </div>
 
 </div>
@@ -387,64 +343,64 @@ layout: center
 class: text-center
 ---
 
-# Which Stage Are You At?
+# **Which stage are you in now?**
 
 <div class="pt-8 text-2xl opacity-80">
 
-Most people are stuck between Stage 1-2
+Most people are stuck between Stage 1~2
 
 </div>
 
-<div class="mt-12 p-8 bg-purple-500 bg-opacity-20 rounded-lg max-w-4xl mx-auto">
+<div class="mt-12 p-8 bg-yellow-100 bg-opacity-30 rounded-lg max-w-4xl mx-auto">
 
-What truly unleashes Agent value is mastering the **Stage 3 and Stage 4** mindset
+What really unleashes the value of Agent is mastering the thinking mode of **Stage 3 and Stage 4**
 
 </div>
 
 <div class="mt-8 text-xl opacity-60">
 
-Not letting AI write words for you, but letting AI do things for you
+It's not about letting AI write for you, but letting AI work for you
 
 </div>
 
 ---
+layout: part-title
+part: 3
+partTitle: How to Use Agents Effectively?
+partSubtitle: Best Practices
+partDescription: Assigning tasks, providing tools, setting rules
+totalParts: 4
+---
+
+---
 layout: center
-class: text-center
 ---
 
-# Part 03
-
-## How to Use Agents Effectively?
-
----
-layout: center
----
-
-# Technique 1: Issue "Tasks" Not "Questions"
+# **Tip 1: Assign "Tasks", not "Questions"**
 
 <div class="pt-8">
 
 Most people are used to asking AI questions
 
-But Agents need:
+But what an Agent needs is:
 
 <div class="grid grid-cols-4 gap-4 mt-8">
 
 <div class="p-4 rounded-lg bg-blue-500 bg-opacity-10 text-center">
 
-### 🎯 Goal
+### **🎯 Target**
 
 </div>
 
-<div class="p-4 rounded-lg bg-green-500 bg-opacity-10 text-center">
+<div class="p-4 rounded-lg bg-sky-100 bg-opacity-50 text-center">
 
-### 📋 Context
+### **📋 Context**
 
 </div>
 
-<div class="p-4 rounded-lg bg-yellow-500 bg-opacity-10 text-center">
+<div class="p-4 rounded-lg bg-sky-50 bg-opacity-60 text-center">
 
-### 🔧 Constraints
+### **🔧 Constraints**
 
 </div>
 
@@ -453,68 +409,65 @@ But Agents need:
 </div>
 
 ---
-layout: center
----
 
-# Ineffective vs Effective Instructions
+# **Inefficient Commands vs Efficient Commands**
 
 <div class="pt-4">
 
-| Ineffective Instruction | Effective Instruction |
-|------------------------|----------------------|
-| "Help me write an email" | "Send an email on my behalf to Professor Zhang, explaining my thesis defense next Wednesday, requesting his feedback before 3 PM Tuesday, tone formal but friendly" |
-| "Check some information" | "Search for the top three domestic AI news stories this week, compile into a 200-word summary, send to my WeChat" |
-| "Help me manage schedule" | "Send me a daily schedule reminder at 8 AM, if there are 3+ tasks, prioritize by importance" |
+| Inefficient Command | Efficient Command |
+|---------|---------|
+| "Help me write an email" | "Send an email to Teacher Zhang on my behalf, explaining my thesis defense is next Wednesday, ask him for feedback by 3pm Tuesday, with a formal yet friendly tone" |
+| "Look up some info" | "Search for the top 3 domestic AI news of this week, summarize into a 200-word brief, and send it to my WeChat" |
+| "Manage my schedule" | "Send me a daily schedule reminder at 8 AM every morning, if there are more than 3 tasks, help me rank them by importance" |
 
 </div>
 
 ---
-layout: center
----
 
-# GTCA Instruction Structure
+# **GTCA Command Structure**
 
 <div class="pt-8">
 
 <div class="grid grid-cols-4 gap-6">
 
-<div class="text-center p-6 rounded-lg bg-blue-500 bg-opacity-10">
+<div class="text-center">
 
-<div class="text-5xl mb-2">G</div>
+<span class="text-7xl text-blue-500 font-bold">G</span>
 
-### Goal
+<div class="text-2xl text-blue-500 font-bold mt-4">Goal</div>
 
-What is the goal
-
-</div>
-
-<div class="text-center p-6 rounded-lg bg-green-500 bg-opacity-10">
-
-<div class="text-5xl mb-2">T</div>
-
-### Tools
-
-Which tools can be used
+**What is the goal**
 
 </div>
 
-<div class="text-center p-6 rounded-lg bg-yellow-500 bg-opacity-10">
+<div class="text-center">
 
-<div class="text-5xl mb-2">C</div>
+<span class="text-7xl text-sky-500 font-bold">T</span>
 
-### Context
+<div class="text-2xl text-sky-500 font-bold mt-4">Tools</div>
 
-Background information
+**What tools can be used**
 
 </div>
 
-<div class="text-center p-6 rounded-lg bg-purple-500 bg-opacity-10">
+<div class="text-center">
 
-<div class="text-5xl mb-2">A</div>
+<span class="text-7xl text-sky-400 font-bold">C</span>
 
-### Action
+<div class="text-2xl text-sky-400 font-bold mt-4">Context</div>
 
-Expected output format
+**Background information**
+
+
+</div>
+
+<div class="text-center">
+
+<span class="text-7xl text-sky-300 font-bold">A</span>
+
+<div class="text-2xl text-sky-300 font-bold mt-4">Action</div>
+
+**Expected output format**
 
 </div>
 
@@ -523,10 +476,8 @@ Expected output format
 </div>
 
 ---
-layout: center
----
 
-# Technique 2: Let AI Learn to Use Tools
+# **Tip 2: Let AI learn to use tools**
 
 <div class="pt-8">
 
@@ -534,24 +485,24 @@ layout: center
 
 <div class="p-6 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 🔌 MCP Tools
+### **🔌 MCP Tools**
 
 <div class="text-left mt-4">
-- Open standard
+- Open standards
 - Connect external tools and data sources
 - GitHub, Notion, Slack...
 </div>
 
 </div>
 
-<div class="p-6 rounded-lg bg-green-500 bg-opacity-10">
+<div class="p-6 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 📦 Skills
+### **📦 Skills**
 
 <div class="text-left mt-4">
 - Reusable capability packages
-- Encapsulate methodologies
-- PPT creation, financial report analysis...
+- Encapsulate workflow methodologies
+- PPT generation, financial report analysis...
 </div>
 
 </div>
@@ -561,10 +512,8 @@ layout: center
 </div>
 
 ---
-layout: center
----
 
-# MCP: Model Context Protocol
+# **MCP: Model Context Protocol**
 
 <div class="pt-8">
 
@@ -580,25 +529,25 @@ layout: center
 
 <div>
 
-### Core Features
+### **Core Features**
 
-- **Unified Interface**: One protocol connects everything
-- **Plug and Play**: No need to write integration logic
-- **Open Standard**: Proposed by Anthropic
+- **Unified interface**: One protocol connects everything
+- **Plug and play**: No need to write integration logic
+- **Open standard**: Proposed by Anthropic
 
 </div>
 
 <div>
 
-### Common MCP Servers
+### **Common MCP Servers**
 
 - GitHub
 - Notion
 - Slack
 - Linear
 - Figma
-- Databases
-- File systems
+- Database
+- File System
 
 </div>
 
@@ -609,18 +558,16 @@ layout: center
 </div>
 
 ---
-layout: center
----
 
-# Skills: Reusable Capability Packages
+# **Skills: Reusable Capability Packages**
 
 <div class="pt-8">
 
 <div class="max-w-4xl mx-auto">
 
-<div class="p-6 bg-green-500 bg-opacity-10 rounded-lg mb-6">
+<div class="p-6 bg-sky-100 bg-opacity-50 rounded-lg mb-6">
 
-A Skill = Documentation (SKILL.md) + Optional scripts/templates/resources
+A Skill = Documentation (SKILL.md) + Optional scripts/templates/reference materials
 
 </div>
 
@@ -628,9 +575,9 @@ A Skill = Documentation (SKILL.md) + Optional scripts/templates/resources
 
 <div>
 
-### Features
+### **Characteristics**
 
-- Loaded on demand, doesn't occupy main context
+- Loaded on-demand, does not occupy main context
 - Composable, shareable, versionable
 - Encapsulates professional knowledge
 
@@ -638,9 +585,9 @@ A Skill = Documentation (SKILL.md) + Optional scripts/templates/resources
 
 <div>
 
-### Typical Examples
+### **Typical Examples**
 
-- PPT creation
+- PPT generation
 - PDF processing
 - Financial report analysis
 - Brand style writing
@@ -655,10 +602,8 @@ A Skill = Documentation (SKILL.md) + Optional scripts/templates/resources
 </div>
 
 ---
-layout: center
----
 
-# MCP vs Skills
+# **MCP vs Skills**
 
 <div class="pt-8">
 
@@ -666,9 +611,9 @@ layout: center
 
 <div class="p-8 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 🔌 MCP
+### **🔌 MCP**
 
-**Channel to External Tools**
+**Channel for connecting external tools**
 
 <div class="mt-4 text-left">
 - Connect real systems
@@ -678,16 +623,16 @@ layout: center
 
 </div>
 
-<div class="p-8 rounded-lg bg-green-500 bg-opacity-10">
+<div class="p-8 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 📦 Skills
+### **📦 Skills**
 
-**Encapsulated Methodologies**
+**Encapsulated practical methodologies**
 
 <div class="mt-4 text-left">
-- Knowledge and processes
+- Knowledge and process
 - Best practices
-- Work patterns
+- Working patterns
 </div>
 
 </div>
@@ -697,10 +642,8 @@ layout: center
 </div>
 
 ---
-layout: center
----
 
-# How to Use Skills Effectively
+# **How to use Skills well**
 
 <div class="pt-8">
 
@@ -708,31 +651,31 @@ layout: center
 
 <div class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 🎯 Focus on Single Scenario
+### **🎯 Focus on single scenario**
 
-One Skill should solve only one type of problem
-
-</div>
-
-<div class="p-4 rounded-lg bg-green-500 bg-opacity-10">
-
-### 📝 Write Clear Triggers
-
-Specify "when to use it"
+A Skill solves only one type of problem
 
 </div>
 
-<div class="p-4 rounded-lg bg-yellow-500 bg-opacity-10">
+<div class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 🔗 Good at Composition
+### **📝 Write clear trigger conditions**
 
-Chain together for complex tasks
+Clarify "when to use it"
 
 </div>
 
-<div class="p-4 rounded-lg bg-purple-500 bg-opacity-10">
+<div class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
 
-### 📦 Start with Templates
+### **🔗 Make good use of combination**
+
+String them together to complete complex tasks
+
+</div>
+
+<div class="p-4 rounded-lg bg-sky-200 bg-opacity-40">
+
+### **📦 Start with templates**
 
 Reuse official or community Skills
 
@@ -743,16 +686,14 @@ Reuse official or community Skills
 </div>
 
 ---
-layout: center
----
 
-# Create Your Own Skills
+# **Make Your Own Skills**
 
 <div class="pt-8">
 
-<div class="p-6 bg-yellow-500 bg-opacity-20 rounded-lg max-w-4xl mx-auto mb-8">
+<div class="p-6 bg-sky-50 bg-opacity-70 rounded-lg max-w-4xl mx-auto mb-8">
 
-**The greatest value of Skills is not using others', but encoding your own workflow**
+**The greatest value of Skills is not using what others have written, but encoding your own workflow into it**
 
 </div>
 
@@ -760,9 +701,9 @@ layout: center
 
 ```
 my-skill/
-├── SKILL.md          ← Required: triggers + steps + output format
-├── template.md       ← Optional: output template
-└── example.txt       ← Optional: reference example
+├── SKILL.md          ← Required: Trigger conditions + Operational steps + Output formats
+├── template.md       ← Optional: Output template
+└── example.txt       ← Optional: Reference examples
 ```
 
 </div>
@@ -770,74 +711,142 @@ my-skill/
 </div>
 
 ---
-layout: center
----
 
-# SKILL.md Four-Section Format
+# **SKILL.md Four-Part Writing Method**
 
-<div class="pt-4 text-left max-w-4xl mx-auto">
+<div class="pt-4">
 
-```markdown
+<div class="grid grid-cols-2 gap-8">
+
+<div class="text-left">
+
+```markdown magic-move
 ## When to use
-Trigger this Skill when users need to write weekly work reports.
+Trigger this Skill when the user needs to write a weekly work report.
 
 ## Goal
-Generate a clear, focused weekly report suitable for sending to direct supervisors.
+Generate a well-structured, focus-highlighted weekly report, suitable for sending to the direct supervisor.
 
 ## Steps
-1. Ask what was accomplished this week
+1. Ask what tasks were completed this week
 2. Ask about next week's plans and current blockers
-3. Organize into three sections: achievements / plans / support needed
-4. Formal tone, max 3 items per section, start with verbs
+3. Organize into three parts: "Achievements / Next Week / Support Needed"
+4. Formal tone, no more than 3 items per section, start with verbs
 
 ## Output format
-Markdown with headings, under 300 words total
+Markdown, with heading levels, total words under 300
 ```
 
 </div>
 
----
-layout: center
+<div class="text-left">
+
+<div v-click="1" class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
+
+### **📌 When to use**
+
+**Tell the Agent when to use this Skill**
+
+- Clear trigger scenarios
+- Prevent false triggers
+- Ensure load in the appropriate context
+
+</div>
+
+<div v-click="2" class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
+
+### **🎯 Goal**
+
+**Define what goal this Skill wants to achieve**
+
+- Clear expected results
+- Evaluation criteria
+- Alignment with user intent
+
+</div>
+
+<div v-click="3" class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
+
+### **📋 Steps**
+
+**Give specific operational steps and processes**
+
+- Executable sequence of steps
+- Key decision points
+- Best practice experiences
+
+</div>
+
+<div v-click="4" class="p-4 rounded-lg bg-sky-200 bg-opacity-40">
+
+### **📤 Output format**
+
+**Define the format and specification of the output**
+
+- Output structure requirements
+- Format constraints
+- Quality standards
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 ---
 
-# Three-Step Quick Start
+# **Three-Step Start Method**
 
 <div class="pt-8">
 
-<div class="space-y-6">
+<div class="grid grid-cols-3 gap-8">
 
-<div class="p-6 rounded-lg bg-blue-500 bg-opacity-10">
+<div class="text-center">
 
-### Step 1: Find Repetitive Tasks
+**<span class="text-6xl text-blue-500 font-bold">Step 1</span>**
 
-Identify something you do repeatedly every week
+<div class="text-3xl text-blue-500 font-bold mt-4">Identify recurring tasks</div>
 
-<div class="opacity-70 mt-2">
-Reports, meeting notes, follow-up emails...
+<div class="mt-4 opacity-70">
+Find something you repeat every week
+</div>
+
+<div class="opacity-60 mt-2">
+Writing reports, organizing meeting notes, sending follow-up emails...
 </div>
 
 </div>
 
-<div class="p-6 rounded-lg bg-green-500 bg-opacity-10">
+<div class="text-center">
 
-### Step 2: Break Down Prompts
+**<span class="text-6xl text-sky-500 font-bold">Step 2</span>**
 
-Copy your usual prompts
+<div class="text-3xl text-sky-500 font-bold mt-4">Deconstruct Prompt</div>
 
-<div class="opacity-70 mt-2">
-Break into "triggers + steps + output format"
+<div class="mt-4 opacity-70">
+Paste the Prompt you normally use
+</div>
+
+<div class="opacity-60 mt-2">
+Break it into "Trigger conditions + Steps + Output formats"
 </div>
 
 </div>
 
-<div class="p-6 rounded-lg bg-yellow-500 bg-opacity-10">
+<div class="text-center">
 
-### Step 3: Test and Iterate
+**<span class="text-6xl text-sky-400 font-bold">Step 3</span>**
 
+<div class="text-3xl text-sky-400 font-bold mt-4">Test and iterate</div>
+
+<div class="mt-4 opacity-70">
 Save as SKILL.md
+</div>
 
-<div class="opacity-70 mt-2">
-Load in Claude, run once, refine based on output
+<div class="opacity-60 mt-2">
+Load in Claude, run it once, modify according to output
 </div>
 
 </div>
@@ -847,64 +856,63 @@ Load in Claude, run once, refine based on output
 </div>
 
 ---
-layout: center
----
 
-# Suitable Skill Customization Scenarios
+# **Skill Scenarios Suitable for Customization**
 
 <div class="pt-8">
 
 | Scenario | Skill Name | Core Value |
-|----------|-----------|------------|
-| Weekly reports | weekly-report | Consistent style, save formatting time |
-| Meeting notes | meeting-notes | Auto-extract action items |
-| Email drafting | email-drafter | Maintain your tone and signature style |
-| Competitor analysis | competitor-research | Fixed analysis framework, comparable output |
-| Reading/article summaries | article-summary | Consistent summary structure, easy to archive |
+|------|-----------|---------|
+| Weekly Report | weekly-report | Unified style, eliminate formatting adjustments |
+| Meeting Notes | meeting-notes | Automatically extract Action Items |
+| Email Drafting | email-drafter | Maintain usual tone and signature style |
+| Competitor Analysis | competitor-research | Fixed analytical framework, output is comparable |
+| Book/Article Summary | article-summary | Unified summary structure, easy to archive |
 
 </div>
 
 ---
-layout: center
----
 
-# Technique 3: Instruction / Rule
+# **Tip 3: Instruction / Rule**
 
 <div class="pt-8">
 
 <div class="max-w-4xl mx-auto">
 
-<div class="p-6 bg-purple-500 bg-opacity-10 rounded-lg mb-8">
 
-If Skills are "giving Agent an operations manual"
+If Skills are "an operations manual to the Agent"
 
-Then Instruction / Rule is "setting Agent boundaries"
+Then Instruction / Rule is **"setting the rules for the Agent"**
 
-</div>
+For Claude Code / Cowork, it's `CLAUDE.md`
+
+For OpenClaw, it's `CONFIG.md`
+
+For Codex, it's `AGENT.md`
 
 <div class="grid grid-cols-2 gap-6">
 
-<div class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
+<div class="p-4 rounded-lg bg-blue-400 bg-opacity-10">
 
-### Instruction
-
-<div class="text-left mt-2">
-Tell Agent who it is and what its goals are
-</div>
-
-Focus on identity and role setting
-
-</div>
-
-<div class="p-4 rounded-lg bg-green-500 bg-opacity-10">
-
-### Rule
+### **Instruction**
 
 <div class="text-left mt-2">
-Constrain Agent's behavioral boundaries
+Tell Agent who it is, what the goal is
 </div>
 
-Focus on "what can/cannot be done"
+Biased towards identity and role setting
+
+</div>
+
+<div class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
+
+### **Rule**
+
+<div class="text-left mt-2">
+Constrain the behavioral boundary of the Agent
+</div>
+
+Biased towards "what can/cannot be done"
 
 </div>
 
@@ -915,59 +923,53 @@ Focus on "what can/cannot be done"
 </div>
 
 ---
-layout: center
----
 
-# Five Common Rule Types
+# **Five Types of Common Rules**
 
 <div class="pt-8">
 
 | Type | Example |
-|------|---------|
-| **Identity Setting** | "You are my personal work assistant named Xiao Bai, familiar with my work habits" |
-| **Language Style** | "Reply in Chinese, keep technical terms in English, concise without fluff" |
-| **Output Format** | "Give conclusions first, then reasons, max three points, numbered" |
-| **Behavioral Boundaries** | "Don't send external messages proactively, must tell me content first" |
-| **Priority Logic** | "If I say 'urgent', skip analysis and give executable solution directly" |
+|------|------|
+| **Identity Setting** | "You are my personal work assistant named Xiaobai, familiar with my working habits" |
+| **Language Style** | "Keep all replies in English, professional terms should stick to their original words, keep an objective and concise tone" |
+| **Output format** | "Always put conclusion first in suggestions, followed by reasons, up to 3 points, numbered" |
+| **Behavior Boundary** | "Don't initiate sending out any external messages, you must confirm the operation details with me before executing" |
+| **Priority Logic** | "If I say 'Urgent', skip background analysis, supply executable plan straight away" |
 
 </div>
 
 ---
-layout: center
----
 
-# Complete Instruction Example
+# **Complete Instruction Example**
 
 <div class="pt-4 text-left max-w-4xl mx-auto">
 
 ```
-You are my personal productivity assistant named Xiao Bai.
+You are my personal efficiency assistant, named Xiaobai.
 
-【Role】
-You understand my work background (product manager, B2B SaaS products),
-familiar with my daily workflow including PRD writing, competitive analysis, weekly meeting preparation.
+[Role]
+You know my work background (Product Manager for a B2B SaaS product),
+familiar with my daily workflow, including writing PRDs, doing competitor analysis, preparing weekly reports.
 
-【Style】
-- Reply in Chinese, concise and direct, no "sure" or "no problem" opening
-- Keep technical terms in English (like API, DAU, MRR)
-- Keep replies under 200 words unless I ask for detail
+[Style]
+- Reply in English, brief and direct, don't use openers like "Sure" "No problem"
+- Technical terms retain English abbreviations (e.g. API, DAU, MRR)
+- Keep each reply under 200 words unless I ask for details
 
-【Boundaries】
-- For external operations like sending emails or submitting docs, must list content for confirmation first
-- Don't proactively recommend paid tools or services
+[Behavior Boundary]
+- Involves sending emails, submitting documents and other external operations, must list operation content for me to confirm first
+- Do not actively recommend paid tools or services
 
-【Priority】
-- When I say "urgent", give solution directly, skip analysis
-- When I say "detail", expand all details and rationale
+[Priority]
+- When I say "Urgent", give the plan right away, skip analysis
+- When I say "Detailed", expand on all details and evidence
 ```
 
 </div>
 
 ---
-layout: center
----
 
-# Four Principles for Good Rules
+# **Four Principles of Writing Good Rules**
 
 <div class="pt-8">
 
@@ -975,88 +977,83 @@ layout: center
 
 <div class="p-6 rounded-lg bg-blue-500 bg-opacity-10">
 
-### 1️⃣ Specific Over Abstract
+### **1️⃣ Specific Over Abstract**
 
-"Reply briefly" is worse than "Reply under 150 words"
-
-</div>
-
-<div class="p-6 rounded-lg bg-green-500 bg-opacity-10">
-
-### 2️⃣ Positive Description
-
-Say "only do X" is more effective than "don't do Y"
+"Short reply" is worse than "Reply no more than 150 words"
 
 </div>
 
-<div class="p-6 rounded-lg bg-yellow-500 bg-opacity-10">
+<div class="p-6 rounded-lg bg-sky-100 bg-opacity-50">
 
-### 3️⃣ Don't Be Greedy
+### **2️⃣ Positive Descriptions**
+
+Saying "Only do X" is more effective than "Don't do Y"
+
+</div>
+
+<div class="p-6 rounded-lg bg-sky-50 bg-opacity-60">
+
+### **3️⃣ Don't Get Greedy**
 
 5 precise rules > 20 vague requirements
 
 </div>
 
-<div class="p-6 rounded-lg bg-purple-500 bg-opacity-10">
+<div class="p-6 rounded-lg bg-sky-200 bg-opacity-40">
 
-### 4️⃣ Adjust as Needed
+### **4️⃣ Constant Iteration**
 
-Update iteratively based on usage patterns
-
-</div>
+Update and iterate along with changing habits
 
 </div>
 
 </div>
 
----
-layout: center
-class: text-center
----
-
-# Part 04
-
-## Security Awareness
+</div>
 
 ---
-layout: center
+layout: part-title
+part: 4
+partTitle: Security Awareness
+partSubtitle: Security & Safety
+partDescription: Minimum privilege principle, low risk first, periodic review
+totalParts: 4
 ---
 
-# Three Security Principles
+---
+
+# **Three Security Principles**
 
 <div class="pt-8">
 
-<div class="space-y-6">
+<div class="space-y-4">
 
-<div class="p-8 rounded-lg bg-red-500 bg-opacity-10 border-2 border-red-500">
+<div class="p-4 rounded-lg bg-sky-400 bg-opacity-20">
 
-### 🔐 Principle of Least Privilege
-
-<div class="text-xl mt-2">
-Only give Agent the permissions it truly needs
-
-</div>
-
-</div>
-
-<div class="p-8 rounded-lg bg-yellow-500 bg-opacity-10 border-2 border-yellow-500">
-
-### 🧪 Test with Low Risk First
+### **🔐 Principle of Least Privilege**
 
 <div class="text-xl mt-2">
-Test with insensitive tasks before granting higher permissions
-
+Only give the Agent the permissions it truly needs
 </div>
 
 </div>
 
-<div class="p-8 rounded-lg bg-blue-500 bg-opacity-10 border-2 border-blue-500">
+<div class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
 
-### 🔍 Regular Audits
+### **🧪 Test Low-Risk First**
 
 <div class="text-xl mt-2">
-Check what Agent is doing, don't leave it completely unattended
+Test with non-sensitive tasks first before granting higher privileges
+</div>
 
+</div>
+
+<div class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
+
+### **🔍 Periodic Review**
+
+<div class="text-xl mt-2">
+Check what the Agent is doing rather than completely letting go
 </div>
 
 </div>
@@ -1070,37 +1067,37 @@ layout: center
 class: text-center
 ---
 
-# Summary
+# **Summary**
 
 <div class="pt-8">
 
-<div class="max-w-4xl mx-auto space-y-6">
+<div class="max-w-6xl mx-auto grid grid-cols-3 gap-6">
 
-<div class="text-left p-6 rounded-lg bg-blue-500 bg-opacity-10">
+<div class="text-left p-4 rounded-lg bg-blue-500 bg-opacity-10 h-full">
 
-### Core of AI Agents
+### **Core of AI Agent**
 
-**LLM Brain + Tools + Memory System**
+**LLM Brain + Tool Limbs + Memory System**
 
-From "answering questions" to "completing tasks"
-
-</div>
-
-<div class="text-left p-6 rounded-lg bg-green-500 bg-opacity-10">
-
-### Key to Using Agents
-
-**Assign Tasks + Provide Tools + Set Rules**
-
-Not letting AI write words for you, but letting AI do things for you
+From "Answering Questions" to "Completing Tasks"
 
 </div>
 
-<div class="text-left p-6 rounded-lg bg-yellow-500 bg-opacity-10">
+<div class="text-left p-4 rounded-lg bg-sky-100 bg-opacity-50 h-full">
 
-### Security First
+### **Key to Using Agent**
 
-**Minimum Permissions + Low-Risk Testing + Regular Audits**
+**Assign tasks + Provide tools + Set rules**
+
+It's not about having AI write for you, but having AI work for you
+
+</div>
+
+<div class="text-left p-4 rounded-lg bg-sky-50 bg-opacity-60 h-full">
+
+### **Security First**
+
+**Least privilege + Low-risk testing + Periodic review**
 
 </div>
 
@@ -1113,20 +1110,10 @@ layout: center
 class: text-center
 ---
 
-# Thank You
+# <span class="text-6xl font-bold text-blue-500"> THAT IS ALL! </span>
 
-<div class="pt-12 text-xl opacity-80">
+<div class="text-xl opacity-80">
 
-Starting today, let AI become your true co-worker
-
-</div>
-
-<div class="mt-12">
-
-<v-clicks>
-
-### Q&A
-
-</v-clicks>
+Starting today, let AI be your true collaborator
 
 </div>
