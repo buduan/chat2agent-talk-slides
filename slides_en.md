@@ -720,7 +720,7 @@ my-skill/
 
 <div class="text-left">
 
-```markdown magic-move
+```markdown {all|1-2|4-5|7-10|12-13|all}
 ## When to use
 Trigger this Skill when the user needs to write a weekly work report.
 
@@ -739,9 +739,9 @@ Markdown, with heading levels, total words under 300
 
 </div>
 
-<div class="text-left">
+<div class="text-left relative" style="min-height: 220px;">
 
-<div v-click="1" class="p-4 rounded-lg bg-blue-500 bg-opacity-10">
+<div v-click="1" v-click-hide="2" class="absolute inset-0 p-4 rounded-lg bg-blue-500 bg-opacity-10">
 
 ### **📌 When to use**
 
@@ -753,7 +753,7 @@ Markdown, with heading levels, total words under 300
 
 </div>
 
-<div v-click="2" class="p-4 rounded-lg bg-sky-100 bg-opacity-50">
+<div v-click="2" v-click-hide="3" class="absolute inset-0 p-4 rounded-lg bg-sky-100 bg-opacity-50">
 
 ### **🎯 Goal**
 
@@ -765,7 +765,7 @@ Markdown, with heading levels, total words under 300
 
 </div>
 
-<div v-click="3" class="p-4 rounded-lg bg-sky-50 bg-opacity-60">
+<div v-click="3" v-click-hide="4" class="absolute inset-0 p-4 rounded-lg bg-sky-50 bg-opacity-60">
 
 ### **📋 Steps**
 
@@ -777,7 +777,7 @@ Markdown, with heading levels, total words under 300
 
 </div>
 
-<div v-click="4" class="p-4 rounded-lg bg-sky-200 bg-opacity-40">
+<div v-click="4" class="absolute inset-0 p-4 rounded-lg bg-sky-200 bg-opacity-40">
 
 ### **📤 Output format**
 
